@@ -1,0 +1,42 @@
+import React from 'react';
+import propTypes from 'prop-types';
+
+const CoverSection = ({ coverImg }) => {
+  // const props = {
+  //   name: 'file',
+  //   action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+  //   headers: {
+  //     authorization: 'authorization-text',
+  //   },
+  //   onChange(info) {
+  //     if (info.file.status !== 'uploading') {
+  //     }
+  //     if (info.file.status === 'done') {
+  //       message.success(`${info.file.name} file uploaded successfully`);
+  //     } else if (info.file.status === 'error') {
+  //       message.error(`${info.file.name} file upload failed.`);
+  //     }
+  //   },
+  // };
+
+  return (
+    <div className="cover-image">
+      <img
+        style={{ width: '100%' }}
+        src={coverImg || require('../../../../static/img/profile/cover-img2.png')}
+        alt="banner"
+      />
+      {/* <Upload {...props}>
+        <Link to="#">
+          <FeatherIcon icon="camera" size={16} /> Change Cover
+        </Link>
+      </Upload> */}
+    </div>
+  );
+};
+
+CoverSection.propTypes = {
+  coverImg: propTypes.string,
+};
+
+export default CoverSection;
